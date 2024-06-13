@@ -47,7 +47,7 @@ let height = 4;
 
 function calculateArea(width, height) {
     const resultOfSquareArea = width * height ;
-    return `площадь прямоугольника: ${resultOfSquareArea}`;
+    return `площадь прямоугольника = ${resultOfSquareArea}`;
 }
 
 console.log(calculateArea(width, height));
@@ -133,38 +133,44 @@ findAnimal();
 
 //Задание 15
 // Допишите программу, которая вычисляет сколько лет прошло с летней олимпиады в Токио, Япония. Подсказка: 1. нужно создать переменную с текущим годом. 2. при вызове функции в круглые скобки нужно передать два параметра: текущий год и год летней олимпиады в Токио.
-// const lastOlympicsYear = 2021;
+const lastOlympicsYear = 2021;
+const currentYear = new Date().getFullYear();
 
-// function calculateYearsSinceLastOlympics(a, b) {
+function calculateYearsSinceLastOlympics(a,b){
+    return a - b;
+}
 
-// }
-
-// console.log(
-// 	'С момента летней олимпиады в Токио прошло ' + calculateYearsSinceLastOlympics() + ' года'.
-// );
+console.log(`С момента летней олимпиады в Токио прошло ${calculateYearsSinceLastOlympics(currentYear , lastOlympicsYear)} года`);
 
 //Задание 16
 // Напишите программу, которая вычисляет возраст пользователя на основе его года рождения, будет выводить результат в консоль.
-const friendYearOfBirth = 1985;
 
-function calculateAge() {
-    let userYear = prompt('What year were you born?');
-    let currentDate =  new Date(); 
-    let yearsOfUser = currentDate.getFullYear() - userYear;
-    return yearsOfUser;
-}
-console.log(calculateAge());
+// const friendYearOfBirth = 1985;
+
+// function calculateAge() {
+//     let userYear = prompt('What year were you born?');
+//     let yearsOfUser = currentYear - userYear;
+//     return yearsOfUser;
+// }
+// console.log(calculateAge());
 
 //Задание 17
 // Напишите функцию которая принимает ваш год рождения и возвращает ваш возраст. Обратите ваше внимание, что в глобальной зоне видимости есть переменная с текущим годом.
 
+// const calcMyAge = (a = currentYear  , b) =>{
+//     const yearOfBirth=prompt('Please write your year of birth, so we can calculate your age:');
+//     return a - yearOfBirth;
+// } ;
+// console.log(calcMyAge());
+
 
 //Задание 18
 // Напишите функцию, которая должна возводить число в заданную степень. Результат должен выводить в консоль в формате: console.log("Результат: " + result);
-const raisingTheNumber = () => {
-    let numberFromTheUser = prompt ('Write the number you want to raise to a power:', 4);
-    let power= prompt ('write the number of your chosen power :', 2);
-    const result = numberFromTheUser ** power;
-    console.log(`Результат: ${result}`);
-};
-raisingTheNumber();
+
+// const raisingTheNumber = () => {
+//     let numberFromTheUser = prompt ('Write the number you want to raise to a power:', 4);
+//     let power= prompt ('write the number of your chosen power :', 2);
+//     const result = numberFromTheUser ** power;
+//     console.log(`Результат: ${result}`);
+// };
+// raisingTheNumber();
